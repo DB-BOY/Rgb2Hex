@@ -51,7 +51,7 @@ public class Rgb2Hex {
         alphaLabel = createLabel("Alpha百分比");
 
         alphaPanel.add(alphaLabel);
-        alphaP = createAlphaText("100");
+        alphaP = createAlphaText("30");
         alphaPanel.add(alphaP);
 
         //数字盘
@@ -119,7 +119,7 @@ public class Rgb2Hex {
     private JTextArea createAlphaText(String name) {
         JTextArea textArea = new JTextArea(name);
         textArea.setFont(new java.awt.Font("Default", 0, 13));
-        textArea.setForeground(Color.black);
+        textArea.setForeground(Color.blue);
         textArea.setBorder(new EmptyBorder(5, 5, 5, 5));
         textArea.setOpaque(false); // 把panel的背景色设为透明
         textArea.getDocument().addDocumentListener(new DocumentListener() {

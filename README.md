@@ -1,8 +1,10 @@
-argb 2 hex
+ARGB 2 HEX
+
+>每次设计同学给的一堆rgb的数值，特别是有时还会加上xx%的透明度，苦逼的事要把这个百分数转成16进制，所以自己写了个工具。
 
 ----
-![i.g](./pic/img.png)
+<img src="./pic/img.jpg" alt="i.g" style="zoom:50%;" />
 
 ----
 
-![i.g](./pic/img1.jpg)
+<img src="./pic/img1.png" alt="i.g" style="zoom:50%;" />

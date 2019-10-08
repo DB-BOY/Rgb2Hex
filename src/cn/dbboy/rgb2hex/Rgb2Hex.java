@@ -26,8 +26,11 @@ public class Rgb2Hex {
     JTextArea numBlue;
     JTextArea hexArea;
     JTextArea alphaP;
+
+    JTextArea alphaNumLabel;
+
     JLabel leftLabel, rightLabel, dot1Label, dot2Label, dot3Label, alphaLabel;
-    JPanel hexPanel, numPanel, alphaPanel,colorPanel;
+    JPanel hexPanel, numPanel, alphaPanel, colorPanel;
 
     private void createView() {
         f = new JFrame("Rgb2Hex");
@@ -47,12 +50,20 @@ public class Rgb2Hex {
 
         //alpha百分比计算
         alphaPanel = createPanel();
-        alphaPanel.setBounds(50, 70, 180, 32);
+        alphaPanel.setBounds(50, 70, 290, 32);
         alphaLabel = createLabel("输入Alpha百分比：");
 
         alphaPanel.add(alphaLabel);
-        alphaP = createAlphaText("30");
+        alphaP = createAlphaText("0");
         alphaPanel.add(alphaP);
+
+        JLabel hex = createLabel("%, Hex值：#");
+        alphaPanel.add(hex);
+
+        alphaNumLabel = new JTextArea("00");
+        alphaNumLabel.setEditable(false);
+        alphaNumLabel.setForeground(Color.BLUE);
+        alphaPanel.add(alphaNumLabel);
 
         //数字盘
         numPanel = createPanel();
@@ -89,9 +100,9 @@ public class Rgb2Hex {
         numPanel.add(rightLabel);
 
 
-		colorPanel = createPanel();
-		colorPanel.setBounds(0, 132,400,500);
-		colorPanel.setOpaque(true);
+        colorPanel = createPanel();
+        colorPanel.setBounds(0, 132, 400, 500);
+        colorPanel.setOpaque(true);
 
         setBackGround();
         // 把面板加入窗口
@@ -167,9 +178,16 @@ public class Rgb2Hex {
         if (text == null || "".equals(text)) {
             return;
         }
-        int number = Integer.valueOf(text);
+        int number = 0;
+        try {
+            number = Integer.valueOf(text);
+        } catch (NumberFormatException e) {
+            number = 0;
+        }
         int tmp = (int) (number * 1f / 100 * 255);
-        numAlpha.setText(String.valueOf(tmp));
+        String str = String.valueOf(tmp);
+        numAlpha.setText(str);
+        alphaNumLabel.setText(OperaColor.toBrowserHexValue(tmp));
     }
 
     private JTextArea createTextField(String name) {
@@ -201,7 +219,7 @@ public class Rgb2Hex {
         //RGBA
         Color c = new Color(cr, cg, cb, ca);
 
-		colorPanel.setBackground(c);
+        colorPanel.setBackground(c);
         hexArea.setText(OperaColor.toHex(ca, cr, cg, cb));
 //		c = new Color(255 - cr, 255 - cg, 255 - cb);
 //		hexArea.setForeground(c);

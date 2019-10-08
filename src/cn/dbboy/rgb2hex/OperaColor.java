@@ -17,9 +17,9 @@ public class OperaColor extends Color {
     }  
     public static String toHex(int r, int g, int b) {  
         return toHex(0,r,g,b);
-    } 
-  
-    private static String toBrowserHexValue(int number) {  
+    }
+
+    public static String toBrowserHexValue(int number) {
         StringBuilder builder = new StringBuilder(Integer.toHexString(number & 0xff));
         if(builder.length()<2){
             while (builder.length() < 2) {

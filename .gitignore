@@ -1,1 +1,8 @@
 /bin
+/.idea/*
+/.settings
+/.out
+/src/META-INF
+/.classpath
+/.project
+/.*iml

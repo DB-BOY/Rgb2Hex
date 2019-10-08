@@ -79,7 +79,7 @@ public class Rgb2Hex {
         numPanel.add(dot1Label);
 
         // red
-        numRed = createTextField("255");
+        numRed = createTextField("55");
         numPanel.add(numRed);
 
         dot2Label = createLabel(",");

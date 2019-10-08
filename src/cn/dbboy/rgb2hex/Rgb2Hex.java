@@ -47,8 +47,8 @@ public class Rgb2Hex {
 
         //alpha百分比计算
         alphaPanel = createPanel();
-        alphaPanel.setBounds(50, 70, 120, 32);
-        alphaLabel = createLabel("Alpha百分比");
+        alphaPanel.setBounds(50, 70, 180, 32);
+        alphaLabel = createLabel("输入Alpha百分比：");
 
         alphaPanel.add(alphaLabel);
         alphaP = createAlphaText("30");

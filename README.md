@@ -5,7 +5,7 @@ ARGB 2 HEX
 
 百分比、argb的数字是可以改变的
 
-**加入calcolor.sh命令行使用，无界面**
+**加入``calcolor.sh``命令行使用，无界面**
 
 
 

@@ -5,6 +5,10 @@ ARGB 2 HEX
 
 百分比、argb的数字是可以改变的
 
+##加入calcolor.sh 命令行使用，无界面## 
+
+
+
 #### 使用
 > 由于本人使用 MackPro 只提供macOS下自己的配置方式
 

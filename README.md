@@ -19,7 +19,7 @@ ARGB 2 HEX
 2. 配置.bash_profile文件
 >如果使用zsh，请自行配置
 
-    ``alial rgb2hex='java -jar ~/ubin/Rgb2Hex.jar >/dev/null 2>&1 &' ``
+    ``alias rgb2hex='java -jar ~/ubin/Rgb2Hex.jar >/dev/null 2>&1 &' ``
 
 3. 使用的时候，在控制台输如``rgb2hex`` 即可
 
